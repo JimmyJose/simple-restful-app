@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.jose.jimi.app.model.common.domain.BaseEntity;
+
 /**
  * TODO:
  * 
@@ -15,26 +17,13 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ITEM")
-public class Item {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "ITEM_ID")
-	private long id;
+public class Item extends BaseEntity {
 	
 	@Column(name = "NAME")
 	private String name;
 	
 	@Column(name = "DESCRIPTION")
 	private String description;
-	
-	public long getId() {
-		return id;
-	}
-	
-	public void setId(long id) {
-		this.id = id;
-	}
 	
 	public String getName() {
 		return name;
