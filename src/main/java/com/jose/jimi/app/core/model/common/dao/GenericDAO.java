@@ -1,4 +1,4 @@
-package com.jose.jimi.app.model.common.dao;
+package com.jose.jimi.app.core.model.common.dao;
 
 import java.io.Serializable;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package com.jose.jimi.app.model.common.domain;
+package com.jose.jimi.app.core.model.common.domain;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;

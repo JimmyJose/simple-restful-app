@@ -1,4 +1,4 @@
-package com.jose.jimi.app.model.common.dao.jpa;
+package com.jose.jimi.app.core.model.common.dao.jpa;
 
 import java.io.Serializable;
 import java.util.Collection;
@@ -8,8 +8,8 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.transaction.annotation.Transactional;
 
-import com.jose.jimi.app.model.common.dao.GenericDAO;
-import com.jose.jimi.app.model.common.domain.BaseEntity;
+import com.jose.jimi.app.core.model.common.dao.GenericDAO;
+import com.jose.jimi.app.core.model.common.domain.BaseEntity;
 
 /**
  * Common implementation of the GenericDAO.

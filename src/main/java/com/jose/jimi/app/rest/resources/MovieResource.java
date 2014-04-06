@@ -1,4 +1,4 @@
-package com.jose.jimi.app.resources;
+package com.jose.jimi.app.rest.resources;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -7,26 +7,26 @@ import javax.ws.rs.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.jose.jimi.app.model.dao.ItemDAO;
-import com.jose.jimi.app.model.domain.Item;
+import com.jose.jimi.app.core.model.dao.MovieDAO;
+import com.jose.jimi.app.core.model.domain.Movie;
 
 /**
- * TODO:
+ * Resources for Movie
  * 
  * @author Jimmy Jose
  * @since April, 2014
  */
 @Component
-@Path("/items")
-public class ItemResource {
+@Path("/movies")
+public class MovieResource {
 	
 	@Autowired
-	ItemDAO itemDAO;
+	MovieDAO movieDAO;
 	
 	@GET
 	@Path("{id}")
-	public String listItem(@PathParam("itemId") long itemId) {
-		Item item = itemDAO.findById(itemId);
+	public String listMovie(@PathParam("movieId") long movieId) {
+		Movie item = movieDAO.findById(movieId);
 		if (item == null) {
 			return "No item found!";
 		}
