@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.jose.jimi.app.core.dto.MovieDTO;
+import com.jose.jimi.app.core.dto.MoviesDTO;
 import com.jose.jimi.app.core.model.dao.MovieDAO;
 import com.jose.jimi.app.core.model.domain.Movie;
 
@@ -44,13 +45,13 @@ public class MovieResource {
 	
 	@GET
 	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public Collection<MovieDTO> listMovies() {
+	public MoviesDTO listMovies() {
 		Collection<Movie> movies = movieDAO.findAll();
 		Collection<MovieDTO> dtos = new ArrayList<MovieDTO>();
 		for (Movie movie : movies) {
 			dtos.add(map(movie));
 		}
-		return dtos;
+		return new MoviesDTO(dtos);
 	}
 	
 	private MovieDTO map(Movie movie) {

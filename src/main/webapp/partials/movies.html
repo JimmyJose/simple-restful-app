@@ -1,3 +1,14 @@
 <div>
-    <p>Movies will be listed here shortly.</p>
+    <div class="container">
+        <header>
+            <h3>Movies listing</h3>
+        </header>
+        
+        <div class="list-group" ng-repeat="movie in movies">
+            <a href="#" class="list-group-item active">
+            <h4 class="list-group-item-heading">name: {{movie.name}}</h4>
+            <p class="list-group-item-text">desc: {{movie.description}}</p>
+            </a>
+        </div>
+    </div>
 </div>

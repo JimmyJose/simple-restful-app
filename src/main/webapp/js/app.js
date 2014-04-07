@@ -12,8 +12,8 @@ app.config(function($routeProvider) {
 	$routeProvider
 	    .when('/movies', 
 	    {
+	    	controller: 'MoviesController',
 	    	templateUrl: 'partials/movies.html'
-	    	
 	    })
 	    .otherwise({ redirectTo: '/movies'});
 });
