@@ -1,0 +1,9 @@
+DROP TABLE movie;
+
+CREATE TABLE movie (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    director VARCHAR(100) NOT NULL,
+    description VARCHAR(500),
+    PRIMARY KEY(ID)
+);
