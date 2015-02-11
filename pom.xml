@@ -9,6 +9,11 @@
 
 	<version>1.0.0-SNAPSHOT</version>
 	<name>Simple REST Application</name>
+        <scm>
+             <url>https://github.com/JimmyJose/simple-restful-app.git</url>
+             <connection>scm:git:ssh://git@github.com:JimmyJose/simple-restful-app.git</connection>
+             <developerConnection>scm:git:ssh://git@github.com:JimmyJose/simple-restful-app.git</developerConnection>
+        </scm>
 
 	<properties>
 		<org.hibernate.version>4.2.2.Final</org.hibernate.version>
